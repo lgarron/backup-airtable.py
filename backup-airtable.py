@@ -18,14 +18,15 @@ parser.add_argument("tables", type=str, nargs="+",
                     help="Base Tables.")
 
 args = parser.parse_args()
-if args.filename is None:
-  args.filename = open("[%s]%s.json" % (args.base_id, now.strftime("[%Y-%m-%d][%H-%M-%S]")), "w")
-AIRTABLE_API_URL = "https://api.airtable.com/v0"
 
 if "AIRTABLE_API_KEY" not in os.environ:
   print("Please set $AIRTABLE_API_KEY in your shell to download choreo data.")
   sys.exit(1)
 AIRTABLE_API_KEY = os.environ["AIRTABLE_API_KEY"]
+
+if args.filename is None:
+  args.filename = open("[%s]%s.json" % (args.base_id, now.strftime("[%Y-%m-%d][%H-%M-%S]")), "w")
+AIRTABLE_API_URL = "https://api.airtable.com/v0"
 
 def get_table_page(table_name, offset=None):
   params = {"view": "Grid view"}

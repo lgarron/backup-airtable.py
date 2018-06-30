@@ -13,4 +13,4 @@ Right now, `airtable-backup` assumes every table has a `Grid view`, and backs up
 
 ## Limitations
 
-Right now, you have to list every table by hand, rather than just specifying the base. I can only hope that Airtable doesn't [have a nefarious reason for this](https://en.wikipedia.org/wiki/Vendor_lock-in), but [they haven't added it to their API yet](https://community.airtable.com/t/list-tables-given-api-key-and-baseid/1173).
+Right now, you have to list every table by hand, rather than just specifying the base ID. I can only hope that Airtable doesn't [have a nefarious reason for this](https://en.wikipedia.org/wiki/Vendor_lock-in), but [they haven't added it to their API yet](https://community.airtable.com/t/list-tables-given-api-key-and-baseid/1173).
