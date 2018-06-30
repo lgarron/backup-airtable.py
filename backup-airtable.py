@@ -20,7 +20,7 @@ parser.add_argument("tables", type=str, nargs="+",
 args = parser.parse_args()
 
 if "AIRTABLE_API_KEY" not in os.environ:
-  print("Please set $AIRTABLE_API_KEY in your shell to download choreo data.")
+  print("Please set $AIRTABLE_API_KEY in your shell.")
   sys.exit(1)
 AIRTABLE_API_KEY = os.environ["AIRTABLE_API_KEY"]
 
