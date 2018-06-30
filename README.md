@@ -1,4 +1,4 @@
-# `airtable-backup`
+# `backup-airtable`
 
 [Airtable](https://airtable.com/) supports [online snapshots](https://support.airtable.com/hc/en-us/articles/202584799-Taking-and-restoring-base-snapshots), but [no way to take home your data](https://community.airtable.com/t/offline-local-backup/754).
 
@@ -9,7 +9,7 @@
     export AIRTABLE_API_KEY=keyAf4JcAuRJkr2AA
     ./backup-airtable.py appSD3jreJRer3Rer "Table 1" "Other Table" "One More Table"
 
-Right now, `airtable-backup` assumes every table has a `Grid view`, and backs up that view.
+Right now, `backup-airtable` assumes every table has a `Grid view`, and backs up that view.
 
 ## Limitations
 
