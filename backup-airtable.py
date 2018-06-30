@@ -8,6 +8,8 @@ import os
 import requests
 import sys
 
+AIRTABLE_API_URL = "https://api.airtable.com/v0"
+
 now = datetime.datetime.now()
 
 parser = argparse.ArgumentParser(description="Back up Airtable Base. Requires you to set $AIRTABLE_API_KEY in the environment.")
@@ -26,7 +28,6 @@ AIRTABLE_API_KEY = os.environ["AIRTABLE_API_KEY"]
 
 if args.filename is None:
   args.filename = open("[%s]%s.json" % (args.base_id, now.strftime("[%Y-%m-%d][%H-%M-%S]")), "w")
-AIRTABLE_API_URL = "https://api.airtable.com/v0"
 
 def get_table_page(table_name, offset=None):
   params = {"view": "Grid view"}
